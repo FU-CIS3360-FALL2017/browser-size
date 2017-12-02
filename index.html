@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+<title>Browser Size</title>
+<meta charset="utf-8">
+<script>
+	function getOuterWidth() {
+		document.write(self.outerWidth);
+		return self.outerWidth;
+	}
+	function getOuterHeight() {
+		document.write(self.outerHeight);
+		return self.outerHeight;
+	}
+	function getInnerWidth() {
+		document.write(self.innerWidth);
+		return self.innerWidth;
+	}
+	function getInnerHeight() {
+		document.write(self.innerHeight);
+		return self.innerHeight;
+	}
+	function getWidthDiff() {
+		document.write(self.outerWidth - self.innerWidth);
+	}
+	function getHeightDiff() {
+		document.write(self.outerHeight - self.innerHeight);
+	}
+</script>
+<style>
+	table {border: 3px solid #000066; padding: 5px;}
+	th, tr, td {padding: 5px;}
+	h1 {padding: 0; margin: 0 0 0 25px}
+</style>
+</head>
+<body>
+	<h1>Browser Size</h1>
+<!--
+	<h2>Inner Height:
+		<script>document.write(getInnerHeight());</script></h2>
+	<h2>Inner Width:
+		<script>document.write(getInnerWidth());</script></h2>
+	<h2>Outer Height:
+		<script>document.write(getOuterHeight());</script></h2>
+	<h2>Outer Width:
+		<script>document.write(getOuterWidth());</script></h2>
+-->
+	<table>
+		<tr><th>Dimension</th><th>Outer</th><th>Inner</th><th>Diff</th></tr>
+		<tr><td>Width</td><td><script>getOuterWidth()</script></td><td><script>getInnerWidth()</script></td>
+			<td><script>getWidthDiff()</script></td></tr>
+		<tr><td>Height</td><td><script>getOuterHeight()</script></td><td><script>getInnerHeight()</script></td>
+			<td><script>getHeightDiff()</script></td></tr>
+	</table>
+</body>
+</html>
+
